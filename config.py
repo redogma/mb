@@ -1,4 +1,4 @@
 import os
 
 class Config(object):
-    KEY = os.environ.get('KEY') or 'where do your parsnips grow?'
+    SECRET_KEY = os.environ.get('SECRET_KEY') or 'where do your parsnips grow?'
