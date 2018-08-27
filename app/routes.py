@@ -15,6 +15,14 @@ def before_request():
         current_user.last_seen = datetime.utcnow()
         db.session.commit()
 
+@app.route('/elevations')
+def elevations():
+    return render_template('tbd.html', title='Elevations')
+
+@app.route('/runs')
+def runs():
+    return render_template('tbd.html', title='Runs')
+
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/index', methods=['GET', 'POST'])
 @login_required
